@@ -1,0 +1,10 @@
+# Dockerfile.nginx
+
+# Используем официальный образ NGINX
+FROM nginx:latest
+
+# Копируем файл конфигурации nginx.conf в контейнер
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Указываем точку входа для NGINX
+CMD ["nginx", "-g", "daemon off;"]
